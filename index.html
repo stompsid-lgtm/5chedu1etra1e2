@@ -60,8 +60,8 @@ html,body{height:100%;overflow:hidden;
 .tbtn:active{background:var(--accent-dim)}
 
 /* CALENDAR */
-#cw{flex:1;overflow:auto;-webkit-overflow-scrolling:touch}
-#cal{display:grid}
+#cw{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;position:relative}
+#cal{display:grid;transition:transform .35s cubic-bezier(0.4, 0.0, 0.2, 1)}
 .ccorner{position:sticky;top:0;left:0;z-index:8;background:var(--bg2);
   border-bottom:1px solid var(--border2);border-right:1px solid var(--border);
   width:var(--slot-w)}
@@ -96,11 +96,15 @@ html,body{height:100%;overflow:hidden;
 /* single chip spans full width */
 .cc.solo .chip{grid-column:1/-1}
 .chip{border-radius:var(--rsm);padding:4px 5px;background:var(--bg3);
-  border-left:3px solid transparent;cursor:pointer;transition:background .12s;
+  border-left:3px solid transparent;cursor:pointer;transition:all .2s;
   min-width:0;overflow:hidden}
 .chip:active{background:var(--bg4)}
 .chip .cn{font-size:11px;font-weight:700;line-height:1.25;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;transition:all .2s}
+/* Filter states */
+.chip.filtered{background:var(--accent-dim);border-left-color:var(--accent)}
+.chip.filtered .cn{color:var(--accent);font-weight:800}
+.chip.dimmed{opacity:.25;filter:grayscale(0.5)}
 .cempty{grid-column:1/-1;display:flex;align-items:center;justify-content:center;
   color:var(--text3);font-size:12px;padding:10px 0;min-height:60px}
 
@@ -131,7 +135,12 @@ html,body{height:100%;overflow:hidden;
 .bslbl{font-size:10px;color:var(--text3);font-weight:600;
   text-transform:uppercase;letter-spacing:.6px;margin-bottom:2px}
 .bsval{font-size:14px;color:var(--text);line-height:1.5}
-.bsclose{width:100%;margin-top:14px;padding:12px;
+.bsfilter{width:100%;margin-top:14px;padding:12px;
+  background:var(--accent);border:none;
+  border-radius:var(--r);color:#fff;
+  font-size:14px;font-weight:700;cursor:pointer;transition:opacity .15s}
+.bsfilter:active{opacity:.7}
+.bsclose{width:100%;margin-top:8px;padding:12px;
   background:var(--bg3);border:1px solid var(--border2);
   border-radius:var(--r);color:var(--text2);
   font-size:14px;font-weight:600;cursor:pointer;transition:background .12s}
@@ -195,6 +204,7 @@ html,body{height:100%;overflow:hidden;
           <button id="b2" class="on" onclick="setView('2day')">2天</button>
           <button id="bw" onclick="setView('week')">週</button>
         </div>
+        <button class="ibtn" id="clearFilterBtn" onclick="clearFilter()" style="display:none;color:var(--accent)" title="清除篩選">✕</button>
         <button class="ibtn" onclick="showPage('settings')">⚙️</button>
       </div>
     </div>
@@ -253,6 +263,8 @@ let off=0;
 // Per-clinic manual overrides stored in localStorage (in addition to JSON config)
 // Format: {clinicId: {extraHidden: [names], extraShow: [names]}}
 let overrides=JSON.parse(localStorage.getItem('cc_overrides')||'{}');
+// Active doctor filter for highlighting
+let activeFilter=null;
 
 // ═══════════════════════════
 //  UTILS
@@ -280,7 +292,13 @@ function getSlot(s){
 function getDates(){
   const t=new Date();t.setHours(0,0,0,0);
   if(view==='2day'){
-    const b=addDays(t,off*2);return[b,addDays(b,1)];
+    const b=addDays(t,off*2);
+    // 跳過週六日
+    const d1=b.getDay()===0?addDays(b,1):b.getDay()===6?addDays(b,2):b;
+    let d2=addDays(d1,1);
+    if(d2.getDay()===0) d2=addDays(d2,1);
+    if(d2.getDay()===6) d2=addDays(d2,2);
+    return[d1,d2];
   }
   const m=getMonday(t);m.setDate(m.getDate()+off*7);
   return Array.from({length:5},(_,i)=>addDays(m,i));
@@ -370,7 +388,13 @@ function render(){
           const clinic=DATA.clinics.find(x=>x.id===s.clinic_id);
           const color=clinic?.color||'#888';
           const name=s.doctor_name;
-          h+=`<div class="chip" style="border-left-color:${color}"
+          // 篩選狀態
+          let chipClass='chip';
+          if(activeFilter){
+            if(name===activeFilter) chipClass+=' filtered';
+            else chipClass+=' dimmed';
+          }
+          h+=`<div class="${chipClass}" style="border-left-color:${color}"
               onclick="openSheet('${s.id}')">
             <span class="cn" style="color:${color}">${name}</span>
           </div>`;
@@ -391,6 +415,17 @@ function render(){
 // ═══════════════════════════
 //  BOTTOM SHEET
 // ═══════════════════════════
+function filterDoctor(name){
+  activeFilter=activeFilter===name?null:name;
+  document.getElementById('clearFilterBtn').style.display=activeFilter?'flex':'none';
+  render();
+  closeSheet();
+}
+function clearFilter(){
+  activeFilter=null;
+  document.getElementById('clearFilterBtn').style.display='none';
+  render();
+}
 function openSheet(sid){
   const s=DATA.sessions.find(x=>x.id===sid);if(!s) return;
   const clinic=DATA.clinics.find(x=>x.id===s.clinic_id);
@@ -430,6 +465,9 @@ function openSheet(sid){
     <div class="bsclin"><div class="bsdot" style="background:${color}"></div>${clinic?.name||'—'}</div>
     <div class="bsname">${s.doctor_name}</div>
     ${rows}
+    <button class="bsfilter" onclick="filterDoctor('${s.doctor_name.replace(/'/g,"\\'")}')">
+      ${activeFilter===s.doctor_name?'✓ 已篩選':'篩選此醫師'}
+    </button>
     <button class="bsclose" onclick="closeSheet()">關閉</button>`;
 
   document.getElementById('ov').classList.add('on');
@@ -456,7 +494,11 @@ function renderSettings(){
   let h='';
 
   h+=`<div class="stitle">診所篩選設定</div>
-  <div class="sdesc">各診所的白/黑名單來自資料來源設定。你可以在這裡追加額外的顯示/隱藏，優先於資料來源設定。</div>`;
+  <div class="sdesc">各診所的白/黑名單來自資料來源設定。你可以在這裡追加額外的顯示/隱藏，優先於資料來源設定。<br><br>
+  <strong>使用方式：</strong><br>
+  • 點擊切換按鈕可快速隱藏/顯示醫師<br>
+  • 在下方輸入框輸入醫師姓名可手動隱藏<br>
+  • 設定會自動儲存在本機，不同裝置不同步</div>`;
 
   DATA.clinics.forEach(cl=>{
     const wl=cl.whitelist||[];
