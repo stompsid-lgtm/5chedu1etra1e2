@@ -970,15 +970,6 @@
       "source_note": "夜間一診"
     },
     {
-      "id": "c20_e1_夜間二",
-      "doctor_name": "蔡長洲",
-      "clinic_id": "c20",
-      "date": "2026-02-23",
-      "slot": "evening",
-      "time_label": "夜診 18:00–21:00",
-      "source_note": "夜間二診"
-    },
-    {
       "id": "c08_m0",
       "doctor_name": "蘇哲惟",
       "clinic_id": "c08",
