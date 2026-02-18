@@ -24,7 +24,7 @@
 - **PWA（輕量）**：`apple-mobile-web-app-capable` meta tag，支援加入主畫面；無 Service Worker，無離線快取。
 - **資料來源**：`schedules.json`，同目錄，每次請求帶 `?v=timestamp` 避免快取。
 - **部署平台**：GitHub Pages（`stompsid-lgtm/5chedu1etra1e2`，branch: main），無後端。
-- **週六/日**：預設 2日檢視會跳過週六日；週檢視只顯示週一至週五（schedules.json 也不含週末，視診所而定）。
+- **週六/日**：app 不顯示週末（週六、週日）。schedules.json 中即使有週六資料也不會呈現，週六輪診等不確定時段無需建入。
 - **使用者設定**：覆寫（extraHidden / extraShow）存在 `localStorage`，裝置間不同步。
 
 ---
