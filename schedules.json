@@ -1564,15 +1564,6 @@
       "source_note": ""
     },
     {
-      "id": "c16_5",
-      "doctor_name": "李紹安",
-      "clinic_id": "c16",
-      "date": "2026-02-24",
-      "slot": "afternoon",
-      "time_label": "下午 13:30–17:00",
-      "source_note": ""
-    },
-    {
       "id": "c16_6",
       "doctor_name": "許哲維",
       "clinic_id": "c16",
@@ -1609,15 +1600,6 @@
       "source_note": ""
     },
     {
-      "id": "c16_10",
-      "doctor_name": "李紹安",
-      "clinic_id": "c16",
-      "date": "2026-02-26",
-      "slot": "evening",
-      "time_label": "晚上 18:00–21:00",
-      "source_note": ""
-    },
-    {
       "id": "c16_11",
       "doctor_name": "李紹安",
       "clinic_id": "c16",
@@ -1651,7 +1633,7 @@
       "date": "2026-02-23",
       "slot": "morning",
       "time_label": "早上 09:00–12:00",
-      "source_note": "一診"
+      "source_note": ""
     },
     {
       "id": "c18_1",
@@ -1678,7 +1660,7 @@
       "date": "2026-02-24",
       "slot": "morning",
       "time_label": "早上 09:00–12:00",
-      "source_note": "一診"
+      "source_note": ""
     },
     {
       "id": "c18_4",
@@ -1687,7 +1669,7 @@
       "date": "2026-02-25",
       "slot": "morning",
       "time_label": "早上 09:00–12:00",
-      "source_note": "一診"
+      "source_note": ""
     },
     {
       "id": "c18_5",
@@ -1696,7 +1678,7 @@
       "date": "2026-02-25",
       "slot": "afternoon",
       "time_label": "下午 15:00–18:00",
-      "source_note": "一診"
+      "source_note": ""
     },
     {
       "id": "c18_6",
@@ -1714,7 +1696,7 @@
       "date": "2026-02-27",
       "slot": "morning",
       "time_label": "早上 09:00–12:00",
-      "source_note": "一診"
+      "source_note": ""
     },
     {
       "id": "c21_0",
@@ -1768,6 +1750,42 @@
       "date": "2026-02-25",
       "slot": "afternoon",
       "time_label": "下午 14:30–17:30",
+      "source_note": ""
+    },
+    {
+      "id": "c16_e_thu",
+      "doctor_name": "許哲維",
+      "clinic_id": "c16",
+      "date": "2026-02-26",
+      "slot": "evening",
+      "time_label": "晚診 18:00–21:00",
+      "source_note": ""
+    },
+    {
+      "id": "c16_e_fri",
+      "doctor_name": "李紹安",
+      "clinic_id": "c16",
+      "date": "2026-02-27",
+      "slot": "evening",
+      "time_label": "晚診 18:00–21:00",
+      "source_note": ""
+    },
+    {
+      "id": "c18_e_tue",
+      "doctor_name": "黃有明",
+      "clinic_id": "c18",
+      "date": "2026-02-24",
+      "slot": "evening",
+      "time_label": "晚上 19:00–22:00",
+      "source_note": ""
+    },
+    {
+      "id": "c18_a_fri",
+      "doctor_name": "黃有明",
+      "clinic_id": "c18",
+      "date": "2026-02-27",
+      "slot": "afternoon",
+      "time_label": "下午 15:00–18:00",
       "source_note": ""
     }
   ]
