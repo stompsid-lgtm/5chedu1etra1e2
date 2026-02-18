@@ -1259,7 +1259,7 @@
     },
     {
       "id": "c11_4",
-      "doctor_name": "張善魁",
+      "doctor_name": "張晉魁",
       "clinic_id": "c11",
       "date": "2026-02-23",
       "slot": "evening",
@@ -1268,7 +1268,7 @@
     },
     {
       "id": "c11_5",
-      "doctor_name": "張善魁",
+      "doctor_name": "張晉魁",
       "clinic_id": "c11",
       "date": "2026-02-24",
       "slot": "morning",
@@ -1277,7 +1277,7 @@
     },
     {
       "id": "c11_6",
-      "doctor_name": "張善魁",
+      "doctor_name": "張晉魁",
       "clinic_id": "c11",
       "date": "2026-02-24",
       "slot": "afternoon",
@@ -1349,7 +1349,7 @@
     },
     {
       "id": "c11_14",
-      "doctor_name": "張善魁",
+      "doctor_name": "張晉魁",
       "clinic_id": "c11",
       "date": "2026-02-26",
       "slot": "evening",
@@ -1358,7 +1358,7 @@
     },
     {
       "id": "c11_15",
-      "doctor_name": "張善魁",
+      "doctor_name": "張晉魁",
       "clinic_id": "c11",
       "date": "2026-02-27",
       "slot": "morning",
@@ -1375,15 +1375,6 @@
       "source_note": "01診"
     },
     {
-      "id": "c11_17",
-      "doctor_name": "林茂森",
-      "clinic_id": "c11",
-      "date": "2026-02-27",
-      "slot": "afternoon",
-      "time_label": "下午 14:30–17:30",
-      "source_note": "02診"
-    },
-    {
       "id": "c11_18",
       "doctor_name": "劉大維",
       "clinic_id": "c11",
@@ -1391,15 +1382,6 @@
       "slot": "evening",
       "time_label": "晚上 18:30–21:30",
       "source_note": "01診"
-    },
-    {
-      "id": "c11_19",
-      "doctor_name": "陳奕成",
-      "clinic_id": "c11",
-      "date": "2026-02-27",
-      "slot": "evening",
-      "time_label": "晚上 18:30–21:30",
-      "source_note": "02診"
     },
     {
       "id": "c11_20",
@@ -1412,21 +1394,12 @@
     },
     {
       "id": "c11_21",
-      "doctor_name": "張善魁",
+      "doctor_name": "張晉魁",
       "clinic_id": "c11",
       "date": "2026-02-28",
       "slot": "morning",
       "time_label": "早上 08:30–12:00",
       "source_note": "02診"
-    },
-    {
-      "id": "c11_22",
-      "doctor_name": "張善魁",
-      "clinic_id": "c11",
-      "date": "2026-02-28",
-      "slot": "afternoon",
-      "time_label": "下午 14:30–17:30",
-      "source_note": "01診"
     },
     {
       "id": "c15_0",
