@@ -1,181 +1,151 @@
-# SOP.md — 每週資料更新標準作業程序
+# SOP.md — 每週資料更新作業程序
 
-## 時機
+## 執行時機
 
-每週一開始前完成（週日晚或週一早）。
-
----
-
-## Step 1：確認本週日期範圍
-
-當週 Mon–Fri 的 `YYYY-MM-DD`，填入下方使用。
-（app 只顯示週一至週五，週末無需建入）
+每週日晚或週一早上，在下週班表生效前完成。
 
 ---
 
-## Step 2：週班表（9 間）— 必更新
+## 前置確認
 
-每間都要重抓，舊 sessions 全部替換。
+1. 確認本週日期範圍（週一至週五）
+2. 確認是否跨月（月初需重抓月班表，否則沿用上月資料只換日期）
 
-### cxms（8 間）
+---
 
-用瀏覽器開各診所頁面，直接讀取頁面文字：
+## Step 1｜週班表（9 間）— 每週必抓
+
+用瀏覽器依序開啟，複製頁面文字，解析醫師與時段：
 
 | 診所 | URL |
 |------|-----|
-| 維恩骨科   | http://web.cxms.com.tw/wn/hosp.php |
-| 富新骨科   | http://web.cxms.com.tw/fc/hosp.php |
-| 得安診所   | http://web.cxms.com.tw/da/hosp.php |
-| 昌惟骨科   | http://web.cxms.com.tw/cw/hosp.php |
-| 昌禾骨科   | http://web.cxms.com.tw/ch/hosp.php |
-| 土城杏光   | http://web.cxms.com.tw/xq/hosp.php |
-| 得揚診所   | http://web.cxms.com.tw/dy/hosp.php |
-| 力康骨科   | http://web.cxms.com.tw/lk/hosp.php |
+| 維恩骨科 | http://web.cxms.com.tw/wn/hosp.php |
+| 富新骨科 | http://web.cxms.com.tw/fc/hosp.php |
+| 得安診所 | http://web.cxms.com.tw/da/hosp.php |
+| 昌惟骨科 | http://web.cxms.com.tw/cw/hosp.php |
+| 昌禾骨科 | http://web.cxms.com.tw/ch/hosp.php |
+| 土城杏光 | http://web.cxms.com.tw/xq/hosp.php |
+| 得揚診所 | http://web.cxms.com.tw/dy/hosp.php |
+| 力康骨科 | http://web.cxms.com.tw/lk/hosp.php |
+| 永馨復健科 | http://sc-dr.com.tw/progress/3531035027.php |
 
-**⚠️ 得揚診所日期 bug**：cxms 顯示的日期為錯誤值，需依「星期幾」欄位手動對應本週正確日期。
+**cxms 解析規則：**
+- 頁面文字格式：`上午一診醫師A日期醫師B日期...`
+- 欄位依序對應週一~週五（c19 得揚例外，見下）
+- 套用 blacklist（維恩/得安/昌惟/力康）過濾後才建入 sessions
+- ⚠️ **c19 得揚**：系統顯示日期有 bug（顯示上上週日期），須依「星期幾」對應本週正確日期，不可直接使用頁面上的日期
 
-**blacklist 過濾**（建入前必須排除）：
-
-| 診所 | blacklist |
-|------|-----------|
-| 維恩骨科 | 李毅康、黃鉦斌 |
-| 得安診所 | 郭周樺 |
-| 昌惟骨科 | 莊凱如、陳柏安 |
-| 力康骨科 | 林恭毅、齊燕斌 |
-
-### 永馨復健科（sc-dr 系統）
-
-1. 開啟 http://sc-dr.com.tw/progress/3531035027.php
-2. 點「下一周」直到顯示本週
-3. 讀取陳彥誌的所有時段（whitelist：陳彥誌）
+**永馨解析規則：**
+- 頁面為即時週系統，若預設顯示非本週需點「下一周」導覽
+- 只顯示 whitelist 醫師陳彥誌
 
 ---
 
-## Step 3：月班表（5 間）— 月中換日期，月初重抓
+## Step 2｜月班表（5 間）— 月中只換日期，月初重抓
 
-### 判斷：本週是否跨月？
+### 月中（同月份內）
 
-- **否（月中）**：直接把上週 sessions 的 `date` 換成本週對應日期，內容不變
-- **是（月底/月初）**：依下方方式重抓新月份班表
+直接將上週 sessions 的 `date` 欄位替換為本週對應日期（星期幾對應）。不需重新開啟來源頁面。
 
-### 月初重抓方式
+### 月初（換月第一週）
 
-**健維骨科**
-- FB 粉專：facebook.com/JianWeiGuKeZhenSuo → 找最新貼文（月初發布）
-- whitelist：韓文江
+需重新取得新月份班表：
 
-**誠陽復健科**
-- 開啟 Google Sites：sites.google.com/view/chengyang-clinic/home/門診時間
-- 找當月月曆，逐週讀取
-- whitelist：楊景堯
+| 診所 | 來源 | 取得方式 |
+|------|------|----------|
+| 健維骨科 | facebook.com/JianWeiGuKeZhenSuo | 開 FB 粉專 Posts，找最新月班表貼文，截圖或逐格轉錄 |
+| 仁祐骨科 | facebook.com/jenyuorth | 同上 |
+| 順安復健科 | facebook.com/wellnesspmr | 同上 |
+| 誠陽復健科 | sites.google.com/view/chengyang-clinic/home/門診時間 | 瀏覽器開啟，找本月月曆，轉錄當週列 |
+| 康澤復健科 | kangzereh.com/tuchengkangzeappointment | 圖片 URL 規律：`wp-content/uploads/YYYY/MM/NN土城康澤115年M月診表.jpg`，更換年月後直接開啟 |
 
-**康澤復健科**
-- URL 規律：`https://kangzereh.com/wp-content/uploads/YYYY/MM/NN土城康澤115年M月診表.jpg`
-- NN 為流水號，通常從 01 開始嘗試
-- whitelist：無（全顯示）
-
-**仁祐骨科**
-- FB 粉專：facebook.com/jenyuorth → 找最新貼文
-- whitelist：無（全顯示，醫師：劉彥麟、陳漢祐）
-
-**順安復健科**
-- FB 粉專：facebook.com/wellnesspmr → 找最新貼文
-- whitelist：無（全顯示，醫師：滕學淵、陳俊宇）
+**FB 月班表注意事項：**
+- bash/fetch 無法存取，需瀏覽器登入
+- 健維、仁祐、順安均有特殊公休標記（例如 228 假日、春節），需逐格確認
+- 228/國定假日期間通常改為僅早診或全院休息，依圖片標注為準
 
 ---
 
-## Step 4：固定班表（8 間）— 預設跳過
+## Step 3｜固定班表（8 間）— 預設跳過
 
-以下診所班表幾乎不變，除非收到診所公告異動，否則只需把 sessions 的 `date` 換成本週日期：
+以下診所班表幾乎不變，**正常情況不做任何動作**：
 
-| 診所 | 快照位置 |
-|------|----------|
-| 禾安復健科 | snapshots/fb/c01_禾安復健科.txt |
-| 正陽骨科 | snapshots/image/c08_正陽骨科.txt |
-| 板橋維力 | weili-clinic.com（固定班表圖） |
-| 土城維力 | snapshots/website/c11_weili_tucheng.txt |
-| 陳正傑骨科 | snapshots/fb/c12_陳正傑骨科.txt |
-| 悅滿意永和 | snapshots/image/c13_悅滿意永和.txt |
-| 悅滿意新店 | snapshots/image/c14_悅滿意新店.txt |
-| 祥明診所 | snapshots/website/c18_shiangming.txt |
+| 診所 | 來源 | 備註 |
+|------|------|------|
+| 禾安復健科 | FB 2023 貼文 | whitelist: 陳柏誠醫師 |
+| 正陽骨科 | 使用者提供圖片 | whitelist: 黃英庭/黃旭東/蔡馥如 |
+| 板橋維力 | weili-clinic.com 圖片 | whitelist: 高逢駿/陳書佑 |
+| 土城維力 | weili-clinic.com 圖片 | 無 whitelist |
+| 陳正傑骨科 | FB 2023 貼文 | 單人診所 |
+| 悅滿意永和 | 使用者提供圖片 | whitelist: 悅滿意江 |
+| 悅滿意新店 | 使用者提供圖片 | whitelist: 悅滿意江/悅滿意王 |
+| 祥明診所 | shiangming.com/time.php | whitelist: 黃有明 |
 
----
-
-## Step 5：更新 schedules.json
-
-1. 刪除舊週所有 sessions
-2. 依各來源建入新週 sessions
-3. 更新 `meta`：
-   ```json
-   "generated_at": "YYYY-MM-DDTHH:MM:SS+08:00",
-   "week_start": "YYYY-MM-DD",
-   "week_end": "YYYY-MM-DD"
-   ```
+收到診所異動通知時才重新處理，並更新對應快照。
 
 ---
 
-## Step 6：驗證
+## Step 4｜寫入 schedules.json
 
-執行以下檢查，全部 ✓ 才能 push：
+1. 刪除本週舊 sessions（保留 clinics 定義不動）
+2. 建入新 sessions，欄位：
+   - `id`：格式 `{clinic_id}_{slot縮寫}{序號}_{診別}`，如 `c02_m1_上午一`
+   - `doctor_name`：必須與 whitelist 字串**完全一致**
+   - `date`：`YYYY-MM-DD`，只建週一到週五
+   - `slot`：`morning` / `afternoon` / `evening`
+   - `time_label`：顯示用文字，如 `上午 08:30–12:00`
+   - `source_note`：診別或備註，可空
+3. 更新 `meta.week_start`、`meta.week_end`、`meta.generated_at`
 
-1. **22 間診所都有 sessions**（無診所空資料）
-2. **whitelist/blacklist 無違規**（建入前逐間確認）
-3. **日期全在本週 Mon–Fri 範圍**
-4. **無重複 session ID**
-5. **必填欄位無空值**（id, doctor_name, clinic_id, date, slot, time_label）
+---
 
-快速驗證腳本（在 Claude 環境中執行）：
-```python
-import json
-data = json.load(open('schedules.json'))
-clinics = {c['id']: c for c in data['clinics']}
-sessions = data['sessions']
-# 各診所筆數
-for cid in sorted(clinics): 
-    print(cid, len([s for s in sessions if s['clinic_id']==cid]))
-# whitelist/blacklist 違規
-for s in sessions:
-    c = clinics[s['clinic_id']]
-    if c['whitelist'] and s['doctor_name'] not in c['whitelist']:
-        print('WL違規', s['id'], s['doctor_name'])
-    if c['blacklist'] and s['doctor_name'] in c['blacklist']:
-        print('BL違規', s['id'], s['doctor_name'])
+## Step 5｜驗證
+
+執行以下檢查，全部通過才 push：
+
+```
+□ 22 間診所都有 sessions（週末只顯示週一~五，app 不顯示週六日）
+□ 無 whitelist / blacklist 違規
+□ 日期全在本週範圍（週一~週五）
+□ 無重複 session ID
+□ 無必填欄位缺漏
+□ doctor_name 與 whitelist 字串完全一致
 ```
 
 ---
 
-## Step 7：更新快照（週班表和月班表有變動時）
+## Step 6｜Push
 
-- cxms 各間：更新 `snapshots/cxms/` 對應的 `.txt` 文字快照
-- FB 月班表：更新 `snapshots/fb/` 對應的 `.txt`
-- website 月班表：更新 `snapshots/website/` 對應的 `.txt`
-
----
-
-## Step 8：Push
-
-```
-git add schedules.json snapshots/
-git commit -m "週更新 YYYY-MM-DD 週"
+```bash
+cd repo
+git add schedules.json
+git commit -m "週更新 YYYY-MM-DD ~ YYYY-MM-DD"
 git push origin main
 ```
 
-GitHub Pages 約 1–2 分鐘後生效。
+GitHub Pages 自動部署，約 1 分鐘後生效。
 
 ---
 
-## 特殊情況處理
+## 快照更新規則
 
-### 國定假日／補班
+- 週班表（cxms/永馨）：每週更新快照，存入 `snapshots/cxms/` 或 `snapshots/website/`
+- 月班表：換月時更新快照
+- 固定班表：異動時才更新快照
+- 快照格式：純文字，記錄來源 URL、抓取時間、原始班表內容、過濾規則
 
-- 確認各診所是否休診或縮診（部分診所會在 FB 或網站公告）
-- 月班表診所（c09/c15/c16/c17/c22）通常在班表圖片中直接標注，照圖片建入
-- cxms 週班表診所以當週實際顯示為準
+---
 
-### 診所公告固定班表異動
+## 常見問題
 
-1. 重新到來源取得新班表（截圖或文字）
-2. 刪除該診所所有舊 sessions
-3. 依新班表重建 sessions
-4. 更新對應快照檔
-5. 若 whitelist/blacklist 有變，同步更新 clinics 定義
+**Q：某診所 cxms 頁面顯示「本週無門診」或空白？**
+A：記錄於 source_note，該診所本週無 sessions，屬正常。
+
+**Q：FB 貼文找不到本月班表？**
+A：往下捲 Posts 區，有些月班表發在月中而非月初。若確實沒有，沿用上月資料並在 source_note 標記「沿用上月」。
+
+**Q：c19 得揚日期對不上怎麼辦？**
+A：以頁面頂部的「星期一~星期五」欄位順序為準，忽略頁面日期數字，手動對應本週正確日期。
+
+**Q：月班表圖片有特殊標記（紅字/底色）？**
+A：通常代表異動或代診，依標記內容建入正確醫師名稱，並在 source_note 記錄（如「代診」）。
