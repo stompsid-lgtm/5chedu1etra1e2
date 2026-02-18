@@ -81,7 +81,12 @@
 ## 待辦事項
 
 ### 快照歸檔
-- [ ] `/home/claude/snapshots/` 目錄的快照檔移入 repo（`snapshots/` 子目錄），讓驗證紀錄版本控制
+- [x] 所有快照已移入 repo `snapshots/` 目錄（2026-02-18）
+  - `snapshots/cxms/`：8 間（c02~c07, c19, c20）
+  - `snapshots/fb/`：5 間（c01, c09, c12, c17, c22）
+  - `snapshots/image/`：3 間（c08, c13, c14）
+  - `snapshots/website/`：5 間（c11, c15, c16, c18, c21）
+  - c10 板橋維力沿用 weili-clinic.com 同一圖片，內容記錄在 Log 中
 
 ### 自動化方向
 - [ ] cxms 解析腳本（`parse_cxms_all.py`）：已可運行，需整合進每週部署流程

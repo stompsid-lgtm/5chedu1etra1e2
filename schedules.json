@@ -205,15 +205,6 @@
       "source_note": "上午一診"
     },
     {
-      "id": "c02_m2_上午一",
-      "doctor_name": "李毅康",
-      "clinic_id": "c02",
-      "date": "2026-02-24",
-      "slot": "morning",
-      "time_label": "上午 08:30–12:00",
-      "source_note": "上午一診"
-    },
-    {
       "id": "c02_m3_上午一",
       "doctor_name": "朱育葳",
       "clinic_id": "c02",
@@ -367,15 +358,6 @@
       "source_note": "夜間一診"
     },
     {
-      "id": "c04_m1_上午一",
-      "doctor_name": "郭周樺",
-      "clinic_id": "c04",
-      "date": "2026-02-23",
-      "slot": "morning",
-      "time_label": "上午 08:30–12:00",
-      "source_note": "上午一診"
-    },
-    {
       "id": "c04_m2_上午一",
       "doctor_name": "李持盈",
       "clinic_id": "c04",
@@ -407,15 +389,6 @@
       "doctor_name": "許育維",
       "clinic_id": "c04",
       "date": "2026-02-24",
-      "slot": "afternoon",
-      "time_label": "下午 14:00–17:00",
-      "source_note": "下午一診"
-    },
-    {
-      "id": "c04_a3_下午一",
-      "doctor_name": "郭周樺",
-      "clinic_id": "c04",
-      "date": "2026-02-25",
       "slot": "afternoon",
       "time_label": "下午 14:00–17:00",
       "source_note": "下午一診"
@@ -457,15 +430,6 @@
       "source_note": "上午一診"
     },
     {
-      "id": "c05_m2_上午一",
-      "doctor_name": "莊凱如",
-      "clinic_id": "c05",
-      "date": "2026-02-24",
-      "slot": "morning",
-      "time_label": "上午 08:30–12:00",
-      "source_note": "上午一診"
-    },
-    {
       "id": "c05_m3_上午一",
       "doctor_name": "吳灝彝",
       "clinic_id": "c05",
@@ -484,15 +448,6 @@
       "source_note": "下午一診"
     },
     {
-      "id": "c05_a2_下午一",
-      "doctor_name": "莊凱如",
-      "clinic_id": "c05",
-      "date": "2026-02-24",
-      "slot": "afternoon",
-      "time_label": "下午 14:00–17:00",
-      "source_note": "下午一診"
-    },
-    {
       "id": "c05_a3_下午一",
       "doctor_name": "吳灝彝",
       "clinic_id": "c05",
@@ -502,28 +457,10 @@
       "source_note": "下午一診"
     },
     {
-      "id": "c05_e1_夜間一",
-      "doctor_name": "莊凱如",
-      "clinic_id": "c05",
-      "date": "2026-02-23",
-      "slot": "evening",
-      "time_label": "夜診 18:00–21:00",
-      "source_note": "夜間一診"
-    },
-    {
       "id": "c05_e2_夜間一",
       "doctor_name": "吳灝彝",
       "clinic_id": "c05",
       "date": "2026-02-24",
-      "slot": "evening",
-      "time_label": "夜診 18:00–21:00",
-      "source_note": "夜間一診"
-    },
-    {
-      "id": "c05_e3_夜間一",
-      "doctor_name": "莊凱如",
-      "clinic_id": "c05",
-      "date": "2026-02-25",
       "slot": "evening",
       "time_label": "夜診 18:00–21:00",
       "source_note": "夜間一診"
@@ -844,24 +781,6 @@
       "source_note": "上午一診"
     },
     {
-      "id": "c20_m2_上午一",
-      "doctor_name": "林恭毅",
-      "clinic_id": "c20",
-      "date": "2026-02-24",
-      "slot": "morning",
-      "time_label": "上午 08:30–12:00",
-      "source_note": "上午一診"
-    },
-    {
-      "id": "c20_m3_上午一",
-      "doctor_name": "林恭毅",
-      "clinic_id": "c20",
-      "date": "2026-02-25",
-      "slot": "morning",
-      "time_label": "上午 08:30–12:00",
-      "source_note": "上午一診"
-    },
-    {
       "id": "c20_m1_上午二",
       "doctor_name": "黃尚豪",
       "clinic_id": "c20",
@@ -898,37 +817,10 @@
       "source_note": "下午一診"
     },
     {
-      "id": "c20_a2_下午一",
-      "doctor_name": "林恭毅",
-      "clinic_id": "c20",
-      "date": "2026-02-24",
-      "slot": "afternoon",
-      "time_label": "下午 14:00–17:00",
-      "source_note": "下午一診"
-    },
-    {
-      "id": "c20_a3_下午一",
-      "doctor_name": "林恭毅",
-      "clinic_id": "c20",
-      "date": "2026-02-25",
-      "slot": "afternoon",
-      "time_label": "下午 14:00–17:00",
-      "source_note": "下午一診"
-    },
-    {
       "id": "c20_a1_下午二",
       "doctor_name": "彭馨婷",
       "clinic_id": "c20",
       "date": "2026-02-23",
-      "slot": "afternoon",
-      "time_label": "下午 14:00–17:00",
-      "source_note": "下午二診"
-    },
-    {
-      "id": "c20_a2_下午二",
-      "doctor_name": "齊燕斌",
-      "clinic_id": "c20",
-      "date": "2026-02-24",
       "slot": "afternoon",
       "time_label": "下午 14:00–17:00",
       "source_note": "下午二診"
@@ -947,15 +839,6 @@
       "doctor_name": "蔡長洲",
       "clinic_id": "c20",
       "date": "2026-02-23",
-      "slot": "evening",
-      "time_label": "夜診 18:00–21:00",
-      "source_note": "夜間一診"
-    },
-    {
-      "id": "c20_e2_夜間一",
-      "doctor_name": "齊燕斌",
-      "clinic_id": "c20",
-      "date": "2026-02-24",
       "slot": "evening",
       "time_label": "夜診 18:00–21:00",
       "source_note": "夜間一診"
@@ -1165,15 +1048,6 @@
       "date": "2026-02-26",
       "slot": "morning",
       "time_label": "早上 09:00–12:00",
-      "source_note": ""
-    },
-    {
-      "id": "c14_a10",
-      "doctor_name": "悅滿意江",
-      "clinic_id": "c14",
-      "date": "2026-02-26",
-      "slot": "afternoon",
-      "time_label": "下午 14:00–17:00",
       "source_note": ""
     },
     {
@@ -2345,6 +2219,24 @@
       "slot": "evening",
       "time_label": "晚診 18:00–21:00",
       "source_note": ""
+    },
+    {
+      "id": "c19_m6_上午一",
+      "doctor_name": "郭忠和",
+      "clinic_id": "c19",
+      "date": "2026-02-28",
+      "slot": "morning",
+      "time_label": "上午 08:30–12:00",
+      "source_note": "上午一診"
+    },
+    {
+      "id": "c19_a6_下午一",
+      "doctor_name": "廖芝晨",
+      "clinic_id": "c19",
+      "date": "2026-02-28",
+      "slot": "afternoon",
+      "time_label": "下午 14:00–17:00",
+      "source_note": "下午一診"
     }
   ]
 }
