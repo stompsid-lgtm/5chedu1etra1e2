@@ -971,15 +971,6 @@
       "source_note": "夜間一診"
     },
     {
-      "id": "c08_m0",
-      "doctor_name": "蘇哲惟",
-      "clinic_id": "c08",
-      "date": "2026-02-23",
-      "slot": "morning",
-      "time_label": "上午 08:30–12:00",
-      "source_note": "上午一診"
-    },
-    {
       "id": "c08_a1",
       "doctor_name": "黃英庭",
       "clinic_id": "c08",
@@ -1007,31 +998,13 @@
       "source_note": "夜間一診"
     },
     {
-      "id": "c08_e4",
-      "doctor_name": "曾鵬文",
-      "clinic_id": "c08",
-      "date": "2026-02-23",
-      "slot": "evening",
-      "time_label": "夜診 18:00–21:00",
-      "source_note": "夜間二診"
-    },
-    {
-      "id": "c08_m5",
-      "doctor_name": "曾鵬文",
-      "clinic_id": "c08",
-      "date": "2026-02-24",
-      "slot": "morning",
-      "time_label": "上午 08:30–12:00",
-      "source_note": "上午一診"
-    },
-    {
       "id": "c08_a6",
       "doctor_name": "黃旭東",
       "clinic_id": "c08",
       "date": "2026-02-24",
       "slot": "afternoon",
       "time_label": "下午 14:00–17:00",
-      "source_note": "下午二診"
+      "source_note": "下午一診"
     },
     {
       "id": "c08_e7",
@@ -1059,33 +1032,6 @@
       "slot": "afternoon",
       "time_label": "下午 14:00–17:00",
       "source_note": "下午一診"
-    },
-    {
-      "id": "c08_a10",
-      "doctor_name": "曾鵬文",
-      "clinic_id": "c08",
-      "date": "2026-02-25",
-      "slot": "afternoon",
-      "time_label": "下午 14:00–17:00",
-      "source_note": "下午二診"
-    },
-    {
-      "id": "c08_e11",
-      "doctor_name": "曾鵬文",
-      "clinic_id": "c08",
-      "date": "2026-02-25",
-      "slot": "evening",
-      "time_label": "夜診 18:00–21:00",
-      "source_note": "夜間一診"
-    },
-    {
-      "id": "c08_m12",
-      "doctor_name": "曾鵬文",
-      "clinic_id": "c08",
-      "date": "2026-02-26",
-      "slot": "morning",
-      "time_label": "上午 08:30–12:00",
-      "source_note": "上午一診"
     },
     {
       "id": "c08_a13",
@@ -1133,62 +1079,17 @@
       "source_note": "上午一診"
     },
     {
-      "id": "c08_a18",
-      "doctor_name": "蘇哲惟",
-      "clinic_id": "c08",
-      "date": "2026-02-27",
-      "slot": "afternoon",
-      "time_label": "下午 14:00–17:00",
-      "source_note": "下午一診"
-    },
-    {
-      "id": "c08_e19",
-      "doctor_name": "曾鵬文",
-      "clinic_id": "c08",
-      "date": "2026-02-27",
-      "slot": "evening",
-      "time_label": "夜診 18:00–21:00",
-      "source_note": "夜間一診"
-    },
-    {
       "id": "c13_m0",
-      "doctor_name": "悅滿意江",
+      "doctor_name": "江醫師",
       "clinic_id": "c13",
       "date": "2026-02-23",
       "slot": "morning",
       "time_label": "早上 09:00–12:00",
-      "source_note": ""
-    },
-    {
-      "id": "c13_e1",
-      "doctor_name": "林醫師",
-      "clinic_id": "c13",
-      "date": "2026-02-23",
-      "slot": "evening",
-      "time_label": "晚上 18:00–21:00",
-      "source_note": ""
-    },
-    {
-      "id": "c13_m2",
-      "doctor_name": "李醫師",
-      "clinic_id": "c13",
-      "date": "2026-02-24",
-      "slot": "morning",
-      "time_label": "早上 09:00–12:00",
-      "source_note": ""
-    },
-    {
-      "id": "c13_a3",
-      "doctor_name": "李醫師",
-      "clinic_id": "c13",
-      "date": "2026-02-24",
-      "slot": "afternoon",
-      "time_label": "下午 14:00–17:00",
       "source_note": ""
     },
     {
       "id": "c13_e4",
-      "doctor_name": "悅滿意江",
+      "doctor_name": "江醫師",
       "clinic_id": "c13",
       "date": "2026-02-24",
       "slot": "evening",
@@ -1196,26 +1097,8 @@
       "source_note": ""
     },
     {
-      "id": "c13_m5",
-      "doctor_name": "王醫師",
-      "clinic_id": "c13",
-      "date": "2026-02-25",
-      "slot": "morning",
-      "time_label": "早上 09:00–12:00",
-      "source_note": ""
-    },
-    {
-      "id": "c13_a6",
-      "doctor_name": "王醫師",
-      "clinic_id": "c13",
-      "date": "2026-02-26",
-      "slot": "afternoon",
-      "time_label": "下午 14:00–17:00",
-      "source_note": ""
-    },
-    {
       "id": "c13_e7",
-      "doctor_name": "悅滿意江",
+      "doctor_name": "江醫師",
       "clinic_id": "c13",
       "date": "2026-02-26",
       "slot": "evening",
@@ -1224,7 +1107,7 @@
     },
     {
       "id": "c13_m8",
-      "doctor_name": "悅滿意江",
+      "doctor_name": "江醫師",
       "clinic_id": "c13",
       "date": "2026-02-27",
       "slot": "morning",
@@ -1232,26 +1115,8 @@
       "source_note": ""
     },
     {
-      "id": "c14_m0",
-      "doctor_name": "悅滿意李",
-      "clinic_id": "c14",
-      "date": "2026-02-23",
-      "slot": "morning",
-      "time_label": "早上 09:00–12:00",
-      "source_note": ""
-    },
-    {
-      "id": "c14_a1",
-      "doctor_name": "丁醫師",
-      "clinic_id": "c14",
-      "date": "2026-02-23",
-      "slot": "afternoon",
-      "time_label": "下午 14:00–17:00",
-      "source_note": ""
-    },
-    {
       "id": "c14_e2",
-      "doctor_name": "悅滿意王",
+      "doctor_name": "王醫師",
       "clinic_id": "c14",
       "date": "2026-02-23",
       "slot": "evening",
@@ -1259,17 +1124,8 @@
       "source_note": ""
     },
     {
-      "id": "c14_m3",
-      "doctor_name": "丁醫師",
-      "clinic_id": "c14",
-      "date": "2026-02-24",
-      "slot": "morning",
-      "time_label": "早上 09:00–12:00",
-      "source_note": ""
-    },
-    {
       "id": "c14_a4",
-      "doctor_name": "悅滿意王",
+      "doctor_name": "王醫師",
       "clinic_id": "c14",
       "date": "2026-02-24",
       "slot": "afternoon",
@@ -1278,7 +1134,7 @@
     },
     {
       "id": "c14_e5",
-      "doctor_name": "悅滿意王",
+      "doctor_name": "王醫師",
       "clinic_id": "c14",
       "date": "2026-02-24",
       "slot": "evening",
@@ -1286,17 +1142,8 @@
       "source_note": ""
     },
     {
-      "id": "c14_m6",
-      "doctor_name": "雞醫師",
-      "clinic_id": "c14",
-      "date": "2026-02-25",
-      "slot": "morning",
-      "time_label": "早上 09:00–12:00",
-      "source_note": ""
-    },
-    {
       "id": "c14_a7",
-      "doctor_name": "悅滿意王",
+      "doctor_name": "王醫師",
       "clinic_id": "c14",
       "date": "2026-02-25",
       "slot": "afternoon",
@@ -1305,7 +1152,7 @@
     },
     {
       "id": "c14_e8",
-      "doctor_name": "悅滿意江",
+      "doctor_name": "江醫師",
       "clinic_id": "c14",
       "date": "2026-02-25",
       "slot": "evening",
@@ -1314,7 +1161,7 @@
     },
     {
       "id": "c14_m9",
-      "doctor_name": "悅滿意王",
+      "doctor_name": "王醫師",
       "clinic_id": "c14",
       "date": "2026-02-26",
       "slot": "morning",
@@ -1323,7 +1170,7 @@
     },
     {
       "id": "c14_a10",
-      "doctor_name": "悅滿意江",
+      "doctor_name": "江醫師",
       "clinic_id": "c14",
       "date": "2026-02-26",
       "slot": "afternoon",
@@ -1331,21 +1178,48 @@
       "source_note": ""
     },
     {
-      "id": "c14_e11",
-      "doctor_name": "李醫師",
-      "clinic_id": "c14",
-      "date": "2026-02-26",
-      "slot": "evening",
-      "time_label": "晚上 18:00–21:00",
-      "source_note": ""
-    },
-    {
       "id": "c14_m12",
-      "doctor_name": "悅滿意王",
+      "doctor_name": "王醫師",
       "clinic_id": "c14",
       "date": "2026-02-27",
       "slot": "morning",
       "time_label": "早上 09:00–12:00",
+      "source_note": ""
+    },
+    {
+      "id": "c08_m_sat",
+      "doctor_name": "黃旭東",
+      "clinic_id": "c08",
+      "date": "2026-02-28",
+      "slot": "morning",
+      "time_label": "上午 08:30–12:00",
+      "source_note": "上午一診"
+    },
+    {
+      "id": "c13_m_sat",
+      "doctor_name": "江醫師",
+      "clinic_id": "c13",
+      "date": "2026-02-28",
+      "slot": "morning",
+      "time_label": "早上 09:00–12:00",
+      "source_note": ""
+    },
+    {
+      "id": "c14_m_sat",
+      "doctor_name": "王醫師",
+      "clinic_id": "c14",
+      "date": "2026-02-28",
+      "slot": "morning",
+      "time_label": "早上 09:00–12:00",
+      "source_note": ""
+    },
+    {
+      "id": "c14_a_fri",
+      "doctor_name": "江醫師",
+      "clinic_id": "c14",
+      "date": "2026-02-27",
+      "slot": "afternoon",
+      "time_label": "下午 14:00–17:00",
       "source_note": ""
     }
   ]
