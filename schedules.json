@@ -88,7 +88,7 @@
     {
       "id": "c10",
       "name": "板橋維力",
-      "source_type": "linevoom",
+      "source_type": "website",
       "whitelist": [
         "高逢駿",
         "陳書佑"
@@ -1787,6 +1787,123 @@
       "slot": "afternoon",
       "time_label": "下午 15:00–18:00",
       "source_note": ""
+    },
+    {
+      "id": "c10_01",
+      "doctor_name": "高逢駿",
+      "clinic_id": "c10",
+      "date": "2026-02-23",
+      "slot": "morning",
+      "time_label": "早上診 08:30–12:00",
+      "source_note": "01診"
+    },
+    {
+      "id": "c10_02",
+      "doctor_name": "陳書佑",
+      "clinic_id": "c10",
+      "date": "2026-02-24",
+      "slot": "morning",
+      "time_label": "早上診 08:30–12:00",
+      "source_note": "01診"
+    },
+    {
+      "id": "c10_03",
+      "doctor_name": "高逢駿",
+      "clinic_id": "c10",
+      "date": "2026-02-26",
+      "slot": "morning",
+      "time_label": "早上診 08:30–12:00",
+      "source_note": "01診"
+    },
+    {
+      "id": "c10_04",
+      "doctor_name": "陳書佑",
+      "clinic_id": "c10",
+      "date": "2026-02-27",
+      "slot": "morning",
+      "time_label": "早上診 08:30–12:00",
+      "source_note": "01診"
+    },
+    {
+      "id": "c10_05",
+      "doctor_name": "高逢駿",
+      "clinic_id": "c10",
+      "date": "2026-02-28",
+      "slot": "morning",
+      "time_label": "早上診 08:30–12:00",
+      "source_note": "01診"
+    },
+    {
+      "id": "c10_06",
+      "doctor_name": "陳書佑",
+      "clinic_id": "c10",
+      "date": "2026-02-28",
+      "slot": "morning",
+      "time_label": "早上診 08:30–12:00",
+      "source_note": "02診"
+    },
+    {
+      "id": "c10_07",
+      "doctor_name": "陳書佑",
+      "clinic_id": "c10",
+      "date": "2026-02-24",
+      "slot": "afternoon",
+      "time_label": "下午診 14:30–17:30",
+      "source_note": "01診"
+    },
+    {
+      "id": "c10_08",
+      "doctor_name": "陳書佑",
+      "clinic_id": "c10",
+      "date": "2026-02-26",
+      "slot": "afternoon",
+      "time_label": "下午診 14:30–17:30",
+      "source_note": "01診"
+    },
+    {
+      "id": "c10_09",
+      "doctor_name": "高逢駿",
+      "clinic_id": "c10",
+      "date": "2026-02-27",
+      "slot": "afternoon",
+      "time_label": "下午診 14:30–17:30",
+      "source_note": "01診"
+    },
+    {
+      "id": "c10_10",
+      "doctor_name": "陳書佑",
+      "clinic_id": "c10",
+      "date": "2026-02-23",
+      "slot": "evening",
+      "time_label": "晚上診 18:30–21:30",
+      "source_note": "01診"
+    },
+    {
+      "id": "c10_11",
+      "doctor_name": "高逢駿",
+      "clinic_id": "c10",
+      "date": "2026-02-24",
+      "slot": "evening",
+      "time_label": "晚上診 18:30–21:30",
+      "source_note": "01診"
+    },
+    {
+      "id": "c10_12",
+      "doctor_name": "陳書佑",
+      "clinic_id": "c10",
+      "date": "2026-02-26",
+      "slot": "evening",
+      "time_label": "晚上診 18:30–21:30",
+      "source_note": "01診"
+    },
+    {
+      "id": "c10_13",
+      "doctor_name": "高逢駿",
+      "clinic_id": "c10",
+      "date": "2026-02-27",
+      "slot": "evening",
+      "time_label": "晚上診 18:30–21:30",
+      "source_note": "01診"
     }
   ]
 }
