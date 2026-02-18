@@ -44,7 +44,7 @@
       "id": "c01",
       "name": "診所名稱",
       "color": "#hex",
-      "source_type": "cxms|image|website|facebook|linevoom",
+      "source_type": "cxms|image|website|facebook",
       "whitelist": ["醫師名"],   // 只顯示此清單；優先於 blacklist
       "blacklist": ["醫師名"]    // 隱藏此清單；whitelist 存在時此欄無效
     }
@@ -85,7 +85,7 @@
 | c07 | 土城杏光     | cxms        |                        |                      |
 | c08 | 正陽骨科     | image       | 黃英庭, 黃旭東, 蔡馥如 |                      |
 | c09 | 健維骨科     | facebook    | 韓文江                 |                      |
-| c10 | 板橋維力     | linevoom    | 高逢駿, 陳書佑         |                      |
+| c10 | 板橋維力     | website     | 高逢駿, 陳書佑         |                      |
 | c11 | 土城維力     | website     |                        |                      |
 | c12 | 陳正傑骨科   | facebook    |                        |                      |
 | c13 | 悅滿意永和   | image       | 悅滿意江               |                      |
