@@ -11,7 +11,7 @@
       "name": "禾安復健科",
       "source_type": "facebook",
       "whitelist": [
-        "陳柏誠"
+        "陳柏誠醫師"
       ],
       "blacklist": []
     },
@@ -1781,7 +1781,7 @@
     },
     {
       "id": "c01_01",
-      "doctor_name": "陳柏誠",
+      "doctor_name": "陳柏誠醫師",
       "clinic_id": "c01",
       "date": "2026-02-23",
       "slot": "morning",
@@ -1790,7 +1790,7 @@
     },
     {
       "id": "c01_02",
-      "doctor_name": "陳柏誠",
+      "doctor_name": "陳柏誠醫師",
       "clinic_id": "c01",
       "date": "2026-02-23",
       "slot": "evening",
@@ -1799,7 +1799,7 @@
     },
     {
       "id": "c01_03",
-      "doctor_name": "陳柏誠",
+      "doctor_name": "陳柏誠醫師",
       "clinic_id": "c01",
       "date": "2026-02-24",
       "slot": "afternoon",
@@ -1808,7 +1808,7 @@
     },
     {
       "id": "c01_04",
-      "doctor_name": "陳柏誠",
+      "doctor_name": "陳柏誠醫師",
       "clinic_id": "c01",
       "date": "2026-02-25",
       "slot": "morning",
@@ -1817,7 +1817,7 @@
     },
     {
       "id": "c01_05",
-      "doctor_name": "陳柏誠",
+      "doctor_name": "陳柏誠醫師",
       "clinic_id": "c01",
       "date": "2026-02-27",
       "slot": "morning",
@@ -1826,7 +1826,7 @@
     },
     {
       "id": "c01_06",
-      "doctor_name": "陳柏誠",
+      "doctor_name": "陳柏誠醫師",
       "clinic_id": "c01",
       "date": "2026-02-28",
       "slot": "morning",
